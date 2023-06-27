@@ -2,10 +2,10 @@
 
 import axios from "axios";
 import { AiFillGithub } from "react-icons/ai";
-// import { signIn } from "next-auth/react";
+
 import { FcGoogle } from "react-icons/fc";
 import { useCallback, useState } from "react";
-// import { toast } from "react-hot-toast";
+
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 
 import useLoginModal from "@/app/hooks/useLoginModal";
@@ -58,8 +58,6 @@ const RegisterModal = () => {
     loginModal.onOpen();
   }, [registerModal, loginModal]);
 
-
-
   const bodyContent = (
     <div className="flex flex-col gap-4">
       <Heading title="Welcome to Airbnb" subtitle="Create an account!" />
@@ -98,13 +96,13 @@ const RegisterModal = () => {
         outline
         label="Continue with Google"
         icon={FcGoogle}
-        onClick={() => signIn('google')}
+        onClick={() => signIn("google")}
       />
       <Button
         outline
         label="Continue with Github"
         icon={AiFillGithub}
-        onClick={() => signIn('github')}
+        onClick={() => signIn("github")}
       />
       <div
         className="
